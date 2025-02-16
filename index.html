@@ -8,7 +8,7 @@
         }
         
         a:link {
-          color: #578eb6;
+          color: #ffffff;
           background-color: transparent;
           text-decoration: none;
         }
@@ -26,31 +26,79 @@
 
         body {
             font-family:DogicaPixelnew;font-size:30px;
-            margin-top: 32px;
+            background-image: url('fractal-tentacle.png');
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: right bottom;
+            margin-top: 64px;
             margin-right: 64px;
             margin-bottom: 64px;
             margin-left: 64px;
+            text-align: center;
+        }
+        
+        h1 {
+			text-align:center;
+			margin: 64px 0 32px 0;
+		}
+		
+		/* Container für die Bilder und Unterschriften */
+        .image-container {
+            display: flex;
+            justify-content: center; /* Zentriert die Bilder */
+            gap: 32px; /* Abstand zwischen den Bildern */
+            text-align: center; /* Zentriert die Unterschriften */
+            flex-wrap: wrap; /* Bilder umbrechen, falls der Platz zu klein wird */
+        }
+        /* Stil für jedes Bild und seine Unterschrift */
+        .image-item {
+            box-sizing: border-box;
+            margin-bottom: 20px; /* Abstand nach unten, falls Bilder umbrechen */
+        }
+        
+        /* Stil für die Bildunterschriften */
+        .caption {
+            margin-top: 8px;
         }
     </style>
     <title>Fractals</title>
   </head>
-  <body style="background-color:#4d4d4d; color:white">
-    <h1>Fractals</h1>
+  <body  style="background-color:#4d4d4d; color:white">
+    <h1>
+		Fractals
+	</h1>
     <p>
         Where do you want to go to? / <i>Wonach suchst du?</i>
     </p>
     <p>
-        Gallery / <i>Galerie</i> :
-        <a href="https://gallery.fracmi.cc/g/ifs/">gallery.fracmi.cc/g/ifs</a>
+		<div class="image-container">
+			<!-- Erstes Bild -->
+			<div class="image-item">
+				<a href="https://editor.fracmi.cc/">
+					<img src="panel-editor.png" alt="Fractal Generator">
+					<div class="caption">Fractal Generator</div>
+				</a>
+			</div>
+			<!-- Zweites Bild -->
+			<div class="image-item">
+				<a href="https://gallery.fracmi.cc/g/ifs/">
+					<img src="panel-gallery.png" alt="Gallery">
+					<div class="caption">Gallery</div>
+				</a>
+			</div>
+			<!-- Drittes Bild -->
+			<div class="image-item">
+				<a href="FraktalPoster.pdf" download="datei.pdf">
+					<img src="panel-poster.png" alt="Poster">
+					<div class="caption">Poster</div>
+				</a>
+			</div>
+		</div>
     </p>
     <p>
-        Editor : <a href="https://editor.fracmi.cc/">editor.fracmi.cc</a> <br>
-        (Not recommended for smartphones. /
-        <i>Nicht empfohlen für Smartphones.)</i>
-    </p>
-    <p>
+		Not recommended for smartphones. / <i>Nicht empfohlen für Smartphones.</i> <br><br>
         Source code / <i>Quellcode </i>:<br>
-        Editor : <a href="https://github.com/Anomasie/Fractals">https://github.com/Anomasie/Fractals</a><br>
+        Fractal Generator / <i>Fraktal-Generator</i> : <a href="https://github.com/Anomasie/Fractals">https://github.com/Anomasie/Fractals</a><br>
         Gallery / <i>Galerie</i> : <a href="https://github.com/hermlon/polaroids">https://github.com/hermlon/polaroids</a>
   </body>
 </html>
